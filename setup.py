@@ -10,6 +10,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', ['ifc2pointcloud/launch/ifc_pipeline.launch.py']),
+        ('share/' + package_name + '/models', ['ifc2pointcloud/models/scan_robot.sdf']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
