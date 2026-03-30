@@ -12,6 +12,7 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     world_file_name = 'Example_PCD.sdf'
+    # world_file_name = 'lio_world.model'
     world = os.path.join(get_package_share_directory(
         'robot_gazebo'), 'worlds', world_file_name)
     launch_file_dir = os.path.join(
