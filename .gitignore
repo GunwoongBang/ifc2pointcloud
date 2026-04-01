@@ -1,3 +1,4 @@
+# Build artifacts and logs
 build/
 install/
 log/
@@ -19,4 +20,4 @@ venv/
 
 # Directories and files
 lio_sam_gazebo_ros2/
-world/
+worlds/

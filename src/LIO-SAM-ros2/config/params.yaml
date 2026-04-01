@@ -23,7 +23,7 @@
 
     # Export settings
     savePCD: true                                 # https://github.com/TixiaoShan/LIO-SAM/issues/3
-    savePCDDirectory: "/Downloads/LOAM/"          # in your home folder, starts and ends with "/". Warning: the code deletes "LOAM" folder then recreates it. See "mapOptimization" for implementation
+    savePCDDirectory: "/TUM/Thesis/bim3dscenegraph/pc_models/"
 
     # Sensor Settings
     sensor: velodyne                              # lidar sensor type, either 'velodyne', 'ouster' or 'livox'
