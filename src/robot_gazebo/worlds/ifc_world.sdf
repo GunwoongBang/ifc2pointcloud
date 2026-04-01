@@ -1,15 +1,12 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <world name="Example_ARC_1_world">
-    <!-- Ground Plane -->
+  <world name="Example_ARC">
     <include>
       <uri>model://ground_plane</uri>
     </include>
-    <!-- Sun -->
     <include>
       <uri>model://sun</uri>
     </include>
-    <!-- ODE: Physics Engine -->
     <physics type="ode">
       <real_time_update_rate>1000.0</real_time_update_rate>
       <max_step_size>0.001</max_step_size>
@@ -30,14 +27,12 @@
         </constraints>
       </ode>
     </physics>
-    <!-- Robot -->
     <include>
       <name>robot</name>
       <uri>model://robot</uri>
       <pose>-1.5 3 0.7 3.141592654 0 3.141592654</pose>
       <static>false</static>
     </include>
-    <!-- IFC model -->
     <model name="IfcWall_3_Sc93izfEuuDAiaR0_6h3">
       <static>true</static>
       <pose>0 0 0 0 0 0</pose>
@@ -45,7 +40,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3_Sc93izfEuuDAiaR0_6h3.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3_Sc93izfEuuDAiaR0_6h3.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -53,7 +48,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3_Sc93izfEuuDAiaR0_6h3.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3_Sc93izfEuuDAiaR0_6h3.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -71,7 +66,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3S3VgMDFLDiPHeIJPk5HIn.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3S3VgMDFLDiPHeIJPk5HIn.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -79,7 +74,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3S3VgMDFLDiPHeIJPk5HIn.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3S3VgMDFLDiPHeIJPk5HIn.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -97,7 +92,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3S3VgMDFLDiPHeIJPk5HTj.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3S3VgMDFLDiPHeIJPk5HTj.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -105,7 +100,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3S3VgMDFLDiPHeIJPk5HTj.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3S3VgMDFLDiPHeIJPk5HTj.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -123,7 +118,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3S3VgMDFLDiPHeIJPk5HSc.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3S3VgMDFLDiPHeIJPk5HSc.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -131,7 +126,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_3S3VgMDFLDiPHeIJPk5HSc.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_3S3VgMDFLDiPHeIJPk5HSc.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -149,7 +144,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_20rBv4HojAY8M3avWLHAgu.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_20rBv4HojAY8M3avWLHAgu.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -157,7 +152,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_20rBv4HojAY8M3avWLHAgu.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_20rBv4HojAY8M3avWLHAgu.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -175,7 +170,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_20rBv4HojAY8M3avWLHAad.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_20rBv4HojAY8M3avWLHAad.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -183,7 +178,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_20rBv4HojAY8M3avWLHAad.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_20rBv4HojAY8M3avWLHAad.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -201,7 +196,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_1iDZV_Brn0Z9GW0EFhIoO4.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_1iDZV_Brn0Z9GW0EFhIoO4.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -209,7 +204,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcWall_1iDZV_Brn0Z9GW0EFhIoO4.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcWall_1iDZV_Brn0Z9GW0EFhIoO4.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -227,7 +222,7 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcSlab_20rBv4HojAY8M3avWLHAN_.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcSlab_20rBv4HojAY8M3avWLHAN_.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -235,7 +230,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>src/robot_gazebo/worlds/ifc_world/IfcSlab_20rBv4HojAY8M3avWLHAN_.obj</uri>
+              <uri>sdf_models/Example_ARC_meshes/IfcSlab_20rBv4HojAY8M3avWLHAN_.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
