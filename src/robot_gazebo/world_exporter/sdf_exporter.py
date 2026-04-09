@@ -137,7 +137,8 @@ def export_ifc_to_sdf(ifc_model, logger=None):
     return Path(output_path)
 
 if __name__ == "__main__":
-    arc_model = ifcopenshell.open("src/robot_gazebo/world_exporter/arc_model/Example_ARC.ifc")
+    arc_model_path = Path("src/robot_gazebo/world_exporter/arc_model/Example_ARC.ifc")
+    arc_model = ifcopenshell.open(arc_model_path)
     output = export_ifc_to_sdf(arc_model)
 
     print(f"Exported SDF world to: {output}")
