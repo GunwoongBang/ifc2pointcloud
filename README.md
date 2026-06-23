@@ -6,7 +6,6 @@ Integrated ROS 2 workspace for generating point clouds from IFC-based building e
 
 This repository combines:
 
-- IFC-to-SDF world generation for Gazebo
 - Mobile robot simulation in architectural scenes
 - Velodyne LiDAR simulation and point cloud streaming
 - LIO-SAM-based lidar-inertial odometry and mapping
@@ -14,6 +13,29 @@ This repository combines:
 ## Reference Project
 
 This project references and builds on ideas/workflow from Robot Mania's lio_sam_gazebo_ros2 project.
+
+## System Architecture
+
+```mermaid
+flowchart LR
+    SDF[("ifc_world.sdf\n(from IFC)")]
+
+    RD["robot_description\nURDF/Xacro · TF frames"]
+    RC["robot_control\nteleop node"]
+    RG["robot_gazebo\nworld + robot spawn"]
+    VS["velodyne_simulator\nLiDAR Gazebo plugin"]
+    LIOSAM["LIO-SAM-ros2\nLiDAR-inertial SLAM"]
+
+    PCD[("Point cloud \nmodel")]
+
+    SDF -->|world file| RG
+    RD -->|robot URDF| RG
+    RC -->|velocity commands| RG
+    RG -->|hosts sensor| VS
+    VS -->|streams point cloud| LIOSAM
+    RG -->|streams IMU data| LIOSAM
+    LIOSAM -->|maps cloud| PCD
+```
 
 ## Workspace Packages
 
@@ -90,42 +112,3 @@ What it does:
 Current output target:
 - src/robot_gazebo/worlds/ifc_world.sdf
 - src/robot_gazebo/worlds/ifc_world_meshes
-
-## Typical Workflow
-
-1. Generate/refresh SDF world from IFC:
-
-```bash
-/usr/bin/python3 src/robot_gazebo/world_exporter/sdf_exporter.py
-```
-
-2. Build workspace:
-
-```bash
-colcon build
-```
-
-3. Source environment:
-
-```bash
-source install/setup.bash
-```
-
-4. Launch simulation:
-
-```bash
-ros2 launch robot_gazebo robot_sim.launch.py
-```
-
-5. Run LIO-SAM pipeline:
-```bash
-ros2 launch lio_sam run.launch.py
-```
-
-6. Save point cloud
-
-
-## Notes
-
-- Running Gazebo through ROS 2 launch is recommended so model/world paths are resolved consistently.
-- Directly opening a world file with gazebo can fail when model paths are not exported.
