@@ -96,19 +96,3 @@ Highlights:
 - PointCloud2 publishing with Velodyne-like fields
 - Configurable scan parameters and noise
 
-## IFC World Export Pipeline
-
-World exporter location:
-- src/robot_gazebo/world_exporter
-
-Main script:
-- src/robot_gazebo/world_exporter/sdf_exporter.py
-
-What it does:
-- Reads IFC model geometry
-- Extracts mesh for supported IFC element types (walls/slabs)
-- Writes OBJ meshes and generates Gazebo SDF world
-
-Current output target:
-- src/robot_gazebo/worlds/ifc_world.sdf
-- src/robot_gazebo/worlds/ifc_world_meshes
