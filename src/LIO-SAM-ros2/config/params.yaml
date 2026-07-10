@@ -84,7 +84,7 @@
     # (when loop closure disabled)
 
     # Loop closure
-    loopClosureEnableFlag: false
+    loopClosureEnableFlag: true                                 # enable loop closure, set to "false" if you do not want to use loop closure
     loopClosureFrequency: 1.0                                   # Hz, regulate loop closure constraint add frequency
     surroundingKeyframeSize: 50                                 # submap size (when loop closure enabled)
     historyKeyframeSearchRadius: 15.0                           # meters, key frame that is within n meters from

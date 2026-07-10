@@ -89,15 +89,11 @@
         <visualize>1</visualize>
         <topic>__default_topic__</topic>
         <plugin name='imu_plugin' filename='libgazebo_ros_imu_sensor.so'>
-          <topicName>imu_raw</topicName>
-          <update_rate>0</update_rate>
-          <bodyName>imu_link</bodyName>
-          <updateRateHZ>200.0</updateRateHZ>
-          <gaussianNoise>0.0</gaussianNoise>
-          <xyzOffset>0 0 0</xyzOffset>
-          <rpyOffset>0 0 0</rpyOffset>
-          <frameName>base_link</frameName>
-          <initialOrientationAsReference>0</initialOrientationAsReference>
+          <ros>
+            <remapping>~/out:=/imu_plugin/out</remapping>
+          </ros>
+          <frame_name>base_link</frame_name>
+          <initial_orientation_as_reference>0</initial_orientation_as_reference>
         </plugin>
         <pose>0 0 -0.297322 3.14159 0 3.14159</pose>
       </sensor>
