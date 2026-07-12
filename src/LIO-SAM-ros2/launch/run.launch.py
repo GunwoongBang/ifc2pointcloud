@@ -15,7 +15,7 @@ def generate_launch_description():
     # LIO-SAM prepends $HOME to savePCDDirectory, so strip the home prefix here.
     project_root = Path(share_dir).parents[5]
     pcd_save_dir = str(
-        project_root / "pc_models").replace(str(Path.home()), "", 1) + "/"
+        project_root / "pcd_models").replace(str(Path.home()), "", 1) + "/"
 
     parameter_file = LaunchConfiguration('params_file')
     xacro_path = os.path.join(share_dir, 'config', 'robot.urdf.xacro')
