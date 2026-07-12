@@ -23,7 +23,7 @@
 
     # Export settings
     savePCD: true                                               # https://github.com/TixiaoShan/LIO-SAM/issues/3
-    savePCDDirectory: "/TUM/Thesis/bim3dscenegraph/pc_models/"  # change to your desired directory for saving point clouds
+    savePCDDirectory: "/pcd_output/"                            # saved under $HOME (i.e., ~/pcd_output/); dir is wiped+recreated each run
 
     # Sensor Settings
     sensor: velodyne                                            # lidar sensor type, either 'velodyne', 'ouster' or 'livox'

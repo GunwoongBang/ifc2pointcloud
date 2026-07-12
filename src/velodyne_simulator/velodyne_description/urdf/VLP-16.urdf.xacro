@@ -71,9 +71,9 @@
               <vertical>
                 <samples>${lasers}</samples>
                 <resolution>1</resolution>
-                <min_angle>-${15.0*M_PI/180.0}</min_angle>
+                <min_angle>-${45.0*M_PI/180.0}</min_angle>
                 <max_angle>
-                  ${45.0*M_PI/180.0}</max_angle>
+                  ${15.0*M_PI/180.0}</max_angle>
               </vertical>
             </scan>
             <range>
@@ -112,9 +112,9 @@
               <vertical>
                 <samples>${lasers}</samples>
                 <resolution>1</resolution>
-                <min_angle>-${15.0*M_PI/180.0}</min_angle>
+                <min_angle>-${45.0*M_PI/180.0}</min_angle>
                 <max_angle>
-                  ${45.0*M_PI/180.0}</max_angle>
+                  ${15.0*M_PI/180.0}</max_angle>
               </vertical>
             </scan>
             <range>
